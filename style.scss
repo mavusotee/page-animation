@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-color: #d5d8d5;
+    overflow: hidden;
+
+    .head{
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            gap: 2rem;
+            font-size: 40px;
+            font-family: "Poppins";
+            opacity: 0;
+
+            .span{
+                color:  rgb(1, 36, 1);
+            }
+    }
+
+    
+    @mixin hover(){
+        $back-color: rgb(1, 36, 1);
+        $text-color: #d5d8d5;
+
+        background-color: $back-color;
+        color: $text-color;
+    }
+
+    
+    button{
+        margin-left: 45%;
+        border-style: none;
+        background-color: transparent;
+        border-radius: 40px;
+        border: rgb(1, 36, 1)  solid;
+        color: rgb(1, 36, 1);
+        width: 10%;
+        padding: 1rem;
+        font-size: 18px;
+        font-family: "Poppins";
+        opacity: 0;
+
+        button:hover{
+            @include hover()
+        }
+
+    }
+
+
+    .nav{
+        //opacity: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        z-index: 1;
+        opacity: 0;
+
+        .logo{
+          font-size: 45px;
+          font-weight: bold;
+          z-index: 2;
+          color: white;
+        }
+
+        .navlinks{
+          display: flex;
+          gap: 1.5rem;
+          list-style: none;
+          font-size: 22.5px;
+          z-index: 1;
+        }
+
+        .active{
+          color: #cecfce;
+          background-color: rgb(1, 36, 1);
+          padding: 1rem;
+          width: 8%;
+          text-align: center;
+        }
+    }
+
+    .header{
+        display: flex;
+        padding: 2rem;
+        gap: 2rem;
+        justify-content: left;
+        align-items: center;
+
+        img{
+            display: flex;
+            width: 100%;
+            height: 50%;
+            align-items: center;
+            justify-content: center;
+            object-fit: cover;
+            z-index: 0;
+            transform: translateY(-350px);
+            scale: .8;
+
+        }
+
+    }
+}
